@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://ww.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h2>Save Employee</h2>
+	<hr>
+			<form action="#" th:action="@{/java-rabbitmq/producer}" th:object="${employee}" method="POST">
+			
+				
+				<div class="form-inline">
+					<input type="text" th:field="*{firstName}" class="form-control mb-4 col-4" placeholder="First name">
+				
+					<!-- Add error message (if present) -->
+					<span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="badge badge-danger ml-2 mb-4"></span>	
+				</div>
+		
+				<button type="submit" class="btn btn-primary">Save</button>
+			</form>
+			<br/>
+</body>
+</html>

@@ -1,0 +1,20 @@
+package com.example.demo.DAO;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.model.Employee;
+import com.example.demo.service.RabbitMQSender;
+
+@Repository
+public interface RabbitMQDAO extends JpaRepository<Employee, String>
+{
+	@Autowired
+	private RabbitMQSender rabbitmqsender;
+	
+	public void save(String empname, String empid)
+	{
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.example.demo;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient
+public class OffersServiceClient {
+	@RequestMapping(value = "/getCurrentOffers", method = RequestMethod.GET)
+    public List<Offers> getCurrentOffers();
+
+}

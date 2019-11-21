@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns: th=" 'http://ww.thymeleaf.org' ">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Employee list</h1><br/>
+		<hr>
+		<a th:href="@{/employees/showFormForAdd}"
+			class="btn btn-primary btn-sm mb-3"> Add Employee</a>
+
+		<table class="table table-bordered table-striped table-hover">
+			<thead class="thead-dark">
+				<th>FirstName</th>
+				<th>LastName</th>
+				<th>Email</th>
+				<th>Actions</th>
+			</thead>
+
+			<tbody>
+				<tr th:each="tempEmployee : ${employeeList}">
+					<td th:text="${tempEmployee.firstName}" />
+					<td th:text="${tempEmployee.lastName}" />
+					<td th:text="${tempEmployee.email}" />
+					
+					<!-- Add update button/link -->
+					
+					<td>
+						<a th:href="@{/employees/showFormForUpdate(employeeId = ${tempEmployee.id})}" class = "btn btn-info btn-sm">Update</a>
+						<!-- <a th:href="@{/employees/deleteEmployee(employeeId = ${tempEmployee.id})}" class = "btn btn-info btn-sm">Delete</a> -->
+					</td>
+					
+					<!-- Add update button/link -->
+				<td>
+					<form action="#" th:action="@{/employees/showFormForUpdate}" method="POST">
+					
+						<input type="hidden" name="employeeId" th:value="${tempEmployee.id}" />						
+						<button type="submit" class="btn btn-info btn-sm">Update</button>
+
+					</form>
+				</td>
+				
+					
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+server.port=0
+spring.application.name= employee-dashboard
+eureka.client.serviceUrl.defaultZone= http://localhost:8761/eureka
+spring.h2.console.enabled=true

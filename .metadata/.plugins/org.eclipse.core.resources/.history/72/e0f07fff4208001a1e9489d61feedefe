@@ -1,0 +1,23 @@
+#
+# JDBC properties
+#
+app.datasource.jdbc-url=jdbc:mysql://localhost:3306/employee_directory?useSSL=false&serverTimezone=UTC
+app.datasource.username=root
+app.datasource.password= pass@word1
+
+# Spring Data JPA properties
+spring.data.jpa.repository.packages=com.example.demo.repository
+spring.data.jpa.entity.packages-to-scan= com.example.demo.model
+
+#
+# SECURITY JDBC properties
+#
+security.datasource.jdbc-url=jdbc:mysql://localhost:3306/spring_security_demo_bcrypt?useSSL=false&serverTimezone=UTC
+security.datasource.username=root
+security.datasource.password= pass@word1
+server.port=2000
+
+
+
+
+spring.h2.console.enabled=true

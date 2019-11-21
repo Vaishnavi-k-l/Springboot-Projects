@@ -1,0 +1,11 @@
+server.port= 8020
+
+#spring.application.name= offers-service
+  
+#eureka.client.serviceUrl.defaultZone= http://localhost:8761/eureka/
+
+spring.cloud.config.uri= http://localhost:8765/
+
+spring.dataSource.url =jdbc:mysql://localhost:3306/springDb
+spring.dataSource.url.username= root
+spring.dataSource.url.password= pass@word1

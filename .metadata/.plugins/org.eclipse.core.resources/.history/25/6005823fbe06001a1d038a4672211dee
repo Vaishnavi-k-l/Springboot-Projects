@@ -1,0 +1,7 @@
+package com.example.demo;
+
+@FeignClient(name="forex-service")
+@RibbonClient(name="forex-service")
+public interface CurrencyExchangeServiceProxy {
+
+}

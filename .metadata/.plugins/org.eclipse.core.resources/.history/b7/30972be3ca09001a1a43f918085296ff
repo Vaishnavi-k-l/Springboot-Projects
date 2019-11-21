@@ -1,0 +1,11 @@
+server:
+  port: 9999
+spring:
+  data:
+    mongodb:
+      database: todo-angular
+      host: 127.0.0.1
+      port: 27017
+      
+  application:
+    name: user-service

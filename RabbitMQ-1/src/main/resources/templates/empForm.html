@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://ww.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee From</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<h2>Save Employee</h2>
+		<hr>
+		<form action="#" th:action="@{/java-rabbitmq/producer}"
+			th:object="${employee}" method="POST">
+
+			<div class="form-inline">
+				<input type="text" th:field="*{empId}"
+					class="form-control mb-4 col-4" placeholder="EmployeeId">
+			</div>
+
+			<div class="form-inline">
+				<input type="text" th:field="*{empName}"
+					class="form-control mb-4 col-4" placeholder="Employee Name">
+			</div>
+
+			<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+		<br />
+	</div>
+</body>
+</html>

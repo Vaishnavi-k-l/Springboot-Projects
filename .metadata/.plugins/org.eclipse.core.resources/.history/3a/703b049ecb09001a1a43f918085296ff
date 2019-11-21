@@ -1,0 +1,11 @@
+package com.example.demo;
+
+import java.util.List;
+
+import com.example.demo.model.Todo;
+
+public interface TodoService
+{
+	public List<Todo> getAlltodos();
+	public void addTodo();
+}

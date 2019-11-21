@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns: th=" 'http://ww.thymeleaf.org' ">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Employee list</h1>
+		<br />
+		<hr>
+
+		<div>
+			User: <span sec:authentication="name"></span> <br> Role(s): <span
+				sec:authentication="principal.authorities"></span> <br>
+			<br>
+		</div>
+
+		<!-- Add a search form -->
+
+		<form action="#" th:action="@{/employees/search}" method="GET"
+			class="form-inline">
+			<!-- Add employee button -->
+			<a th:href="@{/employees/showFormForAdd}"
+				class="btn btn-primary btn-sm mb-3"> Add Employee</a> <input
+				type="search" name="firstName" placeholder="First name"
+				class="form-control-sm ml-5 mr-2 mb-3" /> <input type="search"
+				name="lastName" placeholder="Last name"
+				class="form-control-sm mr-2 mb-3" /> <input type="search"
+				name="email" placeholder="email" class="form-control-sm mr-2 mb-3" />
+
+			<button type="submit" class="btn btn-success btn-sm mb-3">Search</button>
+		</form>
+
+
+
+		<table class="table table-bordered table-striped table-hover">
+			<thead class="thead-dark">
+				<th>FirstName</th>
+				<th>LastName</th>
+				<th>Email</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</thead>
+
+			<tbody>
+				<tr th:each="tempEmployee : ${employeeList}">
+					<td th:text="${tempEmployee.firstName}" />
+					<td th:text="${tempEmployee.lastName}" />
+					<td th:text="${tempEmployee.email}" />
+
+					<!-- Add update button/link -->
+
+					<td>
+						<div sec:authorize="hasAnyRole('ROLE_MANAGER', 'ROLE_ADMIN')">
+							<a
+								th:href="@{/employees/showFormForUpdate(employeeId = ${tempEmployee.id})}"
+								class="btn btn-info btn-sm">Update</a>
+							<!--  <a th:href="@{/employees/deleteEmployee(employeeId = ${tempEmployee.id})}" class = "btn btn-info btn-sm" onclick="if (!(confirm('Are you sure you want to delete this employee?'))) 
+							return false">Delete</a> -->
+					</td>
+
+					<!-- Add delete button/link -->
+					<td>
+						<div sec:authorize="hasRole('ROLE_ADMIN')">
+							<form action="#" th:action="@{/employees/deleteEmployee}"
+								method="post">
+								<input type="hidden" name="employeeId"
+									th:value="${tempEmployee.id}" />
+								<button type="submit" class="btn btn-danger btn-sm"
+									onclick="if (!(confirm('Are you sure you want to delete this employee?'))) return false">Delete</button>
+							</form>
+					</td>
+
+
+				</tr>
+			</tbody>
+
+		</table>
+
+		<!-- Add a logout button -->
+		<form action="#" th:action="@{/logout}" method="POST">
+
+			<input type="submit" value="Logout"
+				class="btn btn-outline-primary mt-2" />
+
+		</form>
+
+	</div>
+</body>
+</html>

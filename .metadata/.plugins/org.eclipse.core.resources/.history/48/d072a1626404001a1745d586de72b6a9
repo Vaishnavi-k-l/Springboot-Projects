@@ -1,0 +1,4 @@
+server.port= 9090
+spring.h2.console.enabled=true
+spring.application.name= user-service
+eureka.client.serviceUrl.defaultZone= http://localhost:8761/eureka

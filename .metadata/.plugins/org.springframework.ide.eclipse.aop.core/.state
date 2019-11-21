@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Product-RabbitMQ-1"/>
+<aop-project name="spring-boot-jpa"/>
+<aop-project name="recommendation-service"/>
+<aop-project name="customer-service"/>
+<aop-project name="user-service"/>
+<aop-project name="spring-boot-microservice-forex-service"/>
+<aop-project name="zuul-edge-server"/>
+<aop-project name="spring-boot-mvc"/>
+<aop-project name="post-comment-rest-data"/>
+<aop-project name="spring-thymeleaf"/>
+<aop-project name="spring-boot-rest-data"/>
+<aop-project name="spring-boot-microservice-currency-conversion"/>
+<aop-project name="spring-employee-dashboard"/>
+<aop-project name="employee-search-service"/>
+<aop-project name="spring-mongo-post"/>
+<aop-project name="zipkin-server"/>
+<aop-project name="spring-security-with-jdbc"/>
+<aop-project name="admin-server"/>
+<aop-project name="product-service"/>
+<aop-project name="spring-discovery-server"/>
+<aop-project name="validation-service"/>
+<aop-project name="spring-boot-joinpoint">
+<aspect-definition advice-class-name="com.example.demo.aspect.EmployeeServiceAspect" advice-method-name="afterAdvice(org.aspectj.lang.JoinPoint, java.lang.String, java.lang.String)" advice-type="AFTER" aspect-end-line-number="13" aspect-name="employeeServiceAspect" aspect-start-line-number="13" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring-boot-joinpoint/src/main/java/com/example/demo/aspect/EmployeeServiceAspect.java" pointcut-expression="execution(* com.example.demo.service.EmployeeService.*(..)) and args(name,empId)" proxy-target-class="true">
+<aop-reference advice-type="AFTER" bean="1:BeansModel|2:spring-boot-joinpoint|3:java:com.example.demo.SpringBootJoinpointApplication|8:employeeService:8" bean-file="/spring-boot-joinpoint/src/main/java/com/example/demo/service/EmployeeService.java" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring-boot-joinpoint/src/main/java/com/example/demo/SpringBootJoinpointApplication.java" source="=spring-boot-joinpoint/src\/main\/java&lt;com.example.demo.aspect{EmployeeServiceAspect.java[EmployeeServiceAspect~afterAdvice~QJoinPoint;~QString;~QString;" source-start-line="25" target="=spring-boot-joinpoint/src\/main\/java&lt;com.example.demo.service{EmployeeService.java[EmployeeService~createEmployee~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.example.demo.aspect.EmployeeServiceAspect" advice-method-name="aroundAdvice(org.aspectj.lang.JoinPoint, java.lang.String, java.lang.String)" advice-type="AROUND" aspect-end-line-number="13" aspect-name="employeeServiceAspect" aspect-start-line-number="13" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring-boot-joinpoint/src/main/java/com/example/demo/aspect/EmployeeServiceAspect.java" pointcut-expression="execution(* com.example.demo.service.EmployeeService.*(..)) and args(name,empId)" proxy-target-class="true">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring-boot-joinpoint|3:java:com.example.demo.SpringBootJoinpointApplication|8:employeeService:8" bean-file="/spring-boot-joinpoint/src/main/java/com/example/demo/service/EmployeeService.java" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring-boot-joinpoint/src/main/java/com/example/demo/SpringBootJoinpointApplication.java" source="=spring-boot-joinpoint/src\/main\/java&lt;com.example.demo.aspect{EmployeeServiceAspect.java[EmployeeServiceAspect~aroundAdvice~QJoinPoint;~QString;~QString;" source-start-line="39" target="=spring-boot-joinpoint/src\/main\/java&lt;com.example.demo.service{EmployeeService.java[EmployeeService~createEmployee~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.example.demo.aspect.EmployeeServiceAspect" advice-method-name="afterFinallyAdvice(org.aspectj.lang.JoinPoint, java.lang.String, java.lang.String)" advice-type="AFTER_RETURNING" aspect-end-line-number="13" aspect-name="employeeServiceAspect" aspect-start-line-number="13" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring-boot-joinpoint/src/main/java/com/example/demo/aspect/EmployeeServiceAspect.java" pointcut-expression="execution(* com.example.demo.service.EmployeeService.*(..)) and args(name, empId)" proxy-target-class="true">
+<aop-reference advice-type="AFTER_RETURNING" bean="1:BeansModel|2:spring-boot-joinpoint|3:java:com.example.demo.SpringBootJoinpointApplication|8:employeeService:8" bean-file="/spring-boot-joinpoint/src/main/java/com/example/demo/service/EmployeeService.java" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring-boot-joinpoint/src/main/java/com/example/demo/SpringBootJoinpointApplication.java" source="=spring-boot-joinpoint/src\/main\/java&lt;com.example.demo.aspect{EmployeeServiceAspect.java[EmployeeServiceAspect~afterFinallyAdvice~QJoinPoint;~QString;~QString;" source-start-line="33" target="=spring-boot-joinpoint/src\/main\/java&lt;com.example.demo.service{EmployeeService.java[EmployeeService~createEmployee~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.example.demo.aspect.EmployeeServiceAspect" advice-method-name="beforeAdvice(org.aspectj.lang.JoinPoint, java.lang.String, java.lang.String)" advice-type="BEFORE" aspect-end-line-number="13" aspect-name="employeeServiceAspect" aspect-start-line-number="13" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring-boot-joinpoint/src/main/java/com/example/demo/aspect/EmployeeServiceAspect.java" pointcut-expression="execution(* com.example.demo.service.EmployeeService.*(..)) and args(name,empId)" proxy-target-class="true">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:spring-boot-joinpoint|3:java:com.example.demo.SpringBootJoinpointApplication|8:employeeService:8" bean-file="/spring-boot-joinpoint/src/main/java/com/example/demo/service/EmployeeService.java" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring-boot-joinpoint/src/main/java/com/example/demo/SpringBootJoinpointApplication.java" source="=spring-boot-joinpoint/src\/main\/java&lt;com.example.demo.aspect{EmployeeServiceAspect.java[EmployeeServiceAspect~beforeAdvice~QJoinPoint;~QString;~QString;" source-start-line="16" target="=spring-boot-joinpoint/src\/main\/java&lt;com.example.demo.service{EmployeeService.java[EmployeeService~createEmployee~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="spring-aop-mvc-logging"/>
+<aop-project name="spring-config-server"/>
+<aop-project name="RabbitMQ-1"/>
+<aop-project name="gateway-edge-server"/>
+<aop-project name="account-spring-rest-data"/>
+<aop-project name="spring-boot-data-jpa"/>
+<aop-project name="demo"/>
+<aop-project name="login-service"/>
+<aop-project name="zuul-config-server"/>
+<aop-project name="account-service"/>
+<aop-project name="offer-service"/>
+<aop-project name="feign-hystrix-client"/>
+<aop-project name="RabbitMQ-Consumer"/>
+</aop-reference-model>

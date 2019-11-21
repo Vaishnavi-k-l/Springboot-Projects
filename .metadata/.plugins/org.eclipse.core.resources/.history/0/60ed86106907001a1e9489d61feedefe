@@ -1,0 +1,24 @@
+package com.example.demo.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.EmpoyeeRepository;
+
+import lombok.AllArgsConstructor;
+
+@Service
+@AllArgsConstructor
+public class EmployeeServiceImpl implements EmployeeService
+{
+	private EmpoyeeRepository empoyeeRepository;
+	
+	@Override
+	@Transactional
+	public void save(Employee employee) 
+	{
+		
+	}
+
+}

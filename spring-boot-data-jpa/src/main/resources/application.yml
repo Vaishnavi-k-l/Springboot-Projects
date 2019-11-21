@@ -1,0 +1,16 @@
+server:
+  port: 1254
+spring:
+  dataSource:
+    url: jdbc:mysql://localhost:3306/springDb
+    username: root
+    password: pass@word1
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create
+      
+
+  
